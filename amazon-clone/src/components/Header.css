@@ -56,3 +56,6 @@
 .header__basketCount{
     margin: 0 10px;
 }
+.header__nav a{
+    text-decoration: none;
+}
