@@ -1,5 +1,6 @@
 import React from 'react'
 import CurrencyFormat from 'react-currency-format'
+import { useHistory } from 'react-router';
 import { getBasketTotal } from './reducer';
 
 import { useStateValue } from './StateProvider'
@@ -7,6 +8,8 @@ import './Subtotal.css'
 
 function Subtotal() {
     const [{basket}, dispatch] = useStateValue();
+    const history = useHistory();
+
     return (
         <div className="subtotal">
             <CurrencyFormat
