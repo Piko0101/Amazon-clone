@@ -8,11 +8,11 @@ function Home() {
   return (
     <div className="home">
       <div className="home__container ">
-        <div>
+        <div className="home__carousel">
           <Carousel>
-            <CarouselData background="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" />
-            <CarouselData background="https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3000_.jpg" />
-            <CarouselData background="https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg" />
+            <CarouselData image="https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg" />
+            <CarouselData image="https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3000_.jpg" />
+            <CarouselData image="https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg" />
           </Carousel>
         </div>
 

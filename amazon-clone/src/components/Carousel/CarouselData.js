@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CarouselData({children, width, background}) {
+function CarouselData({width, image}) {
     return (
-        <div className="carousel-item" style={{width: width, backgroundImage: `url(${background})`}}>
-            {children}
+        <div className="carousel-item home__image" style={{width: width }}>
+            <img src={image}/>
         </div>
     )
 }

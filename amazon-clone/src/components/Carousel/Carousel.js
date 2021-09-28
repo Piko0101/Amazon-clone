@@ -21,7 +21,7 @@ function Carousel({ children }) {
       if (!paused) {
         updateIndex(activeIndex + 1);
       }
-    }, 5000);
+    }, 3000);
     return () => {
       if (interval) {
         clearInterval(interval);
@@ -37,39 +37,25 @@ function Carousel({ children }) {
     >
       <div className="slider">
         <div
-          className="inner"
+          className="inner  "
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {React.Children.map(children, (child, index) => {
-            <CarouselData />
+            return React.cloneElement(child, { width: "100%" });
           })}
         </div>
         <div className="indicators">
-          <button
-            onClick={() => {
-              updateIndex(activeIndex - 1);
-            }}
-          >
-            Prev
-          </button>
           {React.Children.map(children, (child, index) => {
             return (
               <button
                 onClick={() => {
                   updateIndex(index);
                 }}
+                className={activeIndex===index ? 'active' : ''}
               >
-                {index + 1}
               </button>
             );
           })}
-          <button
-            onClick={() => {
-              updateIndex(activeIndex + 1);
-            }}
-          >
-            Next
-          </button>
         </div>
       </div>
     </div>
